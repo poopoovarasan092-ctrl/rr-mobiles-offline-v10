@@ -13,7 +13,7 @@ const billMessage=b=>`Hello ${b.customer_name||'Customer'}, thank you for shoppi
 const creditMessage=b=>`Hello ${b.customer_name||'Customer'}, this is a friendly payment reminder from RR Mobiles.\nBill: ${b.bill_no}\nDate: ${b.bill_date}\nAmount due: ${money(b.total)}\nPlease contact us after payment. Thank you.`;
 
 function App(){
- const[session,setSession]=useState(null),[configured]=useState(configured),[tab,setTab]=useState('Dashboard'),[rows,setRows]=useState({customers:[],products:[],bills:[],repairs:[],purchases:[],expenses:[],credit_payments:[]}),[loading,setLoading]=useState(false),[msg,setMsg]=useState('');
+ const[session,setSession]=useState(null),[configured]=useState(true),[tab,setTab]=useState('Dashboard'),[rows,setRows]=useState({customers:[],products:[],bills:[],repairs:[],purchases:[],expenses:[],credit_payments:[]}),[loading,setLoading]=useState(false),[msg,setMsg]=useState('');
  const[form,setForm]=useState({}); const[login,setLogin]=useState({email:'',password:''}); const[selectedCustomerId,setSelectedCustomerId]=useState(null);
  const[billItems,setBillItems]=useState([]);
  const[itemDraft,setItemDraft]=useState({product_id:'',name:'',qty:'1',price:'',cost:''});
